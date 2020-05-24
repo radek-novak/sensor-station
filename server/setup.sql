@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS sensors (
   -- it increments by default without need for AUTOINCREMENT
   -- https://www.sqlite.org/autoinc.html
   id INTEGER PRIMARY KEY, 
-  name TEXT
+  name TEXT UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS sensordata (
