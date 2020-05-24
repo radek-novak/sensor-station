@@ -1,0 +1,11 @@
+[Unit]
+Description=Sensor stations
+After=nodered.service
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=python3 /home/pi/bin/station/station.py
+
+[Install]
+WantedBy=multi-user.target
