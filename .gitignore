@@ -1,3 +1,6 @@
 .DS_Store
 
 server/sensors.db
+
+*/__pycache__
+migration
