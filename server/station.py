@@ -35,23 +35,6 @@ def init():
         connection.close()
 
 
-def execute(command, data=None):
-    # 20ms - 1400ms
-    # start = time.perf_counter()
-
-    connection = sqlite3.connect(db_path)
-    cursor = connection.cursor()
-
-    if data is None:
-        cursor.execute(command)
-    else:
-        cursor.execute(command, data)
-
-    connection.commit()
-    connection.close()
-
-    # print(f"took {time.perf_counter() - start}s")
-
 
 def record(data):
     connection = sqlite3.connect(db_path)
